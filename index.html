@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="stylesheet" href="styles/index.css">
+  <title>Bottega Diner</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="container">
+      <h3>Breakfast Menu</h3>
+      <ul class="breakfastMenu">
+        <li class="menuItems">Scrambled eggs</li>
+        <li class="menuItems">Pankcakes</li>
+
+      </ul>
+
+      <h3>Side Menu Breakfast</h3>
+      <ul class="sideMeun">
+        <li class="menuItems">Hashbrowns</li>
+        <li class="menuItems">Bacon</li>
+        <li class="menuItems">Furit Salad</li>
+      </ul>
+    </div>
+
+      <h3>Lunch Menu</h3>
+      <ul class="lunchMenu">
+        <li class="menuItems">Sub Sandwitch</li>
+        <li class="menuItems">Chichen Wings</li>
+        <li class="menuItems">Grilled Cheese Sandwitch</li>
+      </ul>
+      <h3>Dinner Menu</h3>
+      <ul class="dinnerMeun">
+        <li class="menuItems">Hamburger</li>
+        <li class="menuItems">Steak</li>
+
+      </ul>
+      <h3>Side Menu Lunch and Dinner</h3>
+      <ul class="sideMeun">
+        <li class="side">Fires</li>
+        <li class="menuItems">Mac n' Cheese</li>
+        <li class="menuItems">Ceaser Salad</li>
+      </ul>
+    </div>
+
+
+  </div>
+
+  <button onclick="orderHere()">Order Here</button>
+
+
+  <script>
+    const menu = {b1: 4, b2: 5, bs1: 2, l1: 10, l2: 20, l3: 5, d1: 10, d2: 20, s1: 2, s2: 3, s3: 5}
+
+
+    function orderHere() {
+      var i = 0;
+      var order;
+      sum = 0
+
+      for (i = 0; i < 2; i++) {
+        order = prompt("What would you like to eat today?", "Odere Here" + (i+1));
+        sum += menu[order];
+         
+      }
+
+      alert("Your price is $" + sum + ". Enjoy your meal!");
+    }
+  </script>
+</body>
+
+</html>
